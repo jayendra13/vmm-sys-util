@@ -14,7 +14,8 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
-with-serde = ["serde", "serde_derive"]
+serde = ["dep:serde", "serde_derive"]
+with-serde = ["serde"] # Deprecated alias, use `serde` instead
 
 [dependencies]
 libc = "0.2.127"

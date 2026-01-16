@@ -6,6 +6,10 @@
 
 - [[#254](https://github.com/rust-vmm/vmm-sys-util/pull/254)]: Support `TFD_NONBLOCK` for `timerfd::TimerFd`.
 
+### Changed
+
+- [[#220](https://github.com/rust-vmm/vmm-sys-util/issues/220)]: Renamed `with-serde` feature to `serde` to follow Rust API naming guidelines. The old `with-serde` name is kept as a deprecated alias for backward compatibility but will be removed in a future release.
+
 ## v0.15.0
 
 ### Added
@@ -161,7 +165,7 @@ function for constructing an empty FamStructWrapper with a given header.
 # v0.5.0
 
 * Added conditionally compiled `serde` compatibility to `FamStructWrapper`,
-  gated by the `with-serde` feature.
+  gated by the `serde` feature.
 * Implemented `Into<std::io::Error` for `errno::Error`.
 * Added a wrapper over `libc::epoll` used for basic epoll operations.
 
