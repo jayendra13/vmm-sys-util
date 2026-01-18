@@ -21,8 +21,7 @@
 /// # Example
 ///
 /// ```rust
-/// use vmm_sys_util::align_downwards;
-///
+/// # use vmm_sys_util::align_downwards;
 /// let addr: usize = 10;
 /// let alignment: usize = 4; // Must be a power of two
 /// let aligned = align_downwards!(addr, alignment);
@@ -56,8 +55,7 @@ macro_rules! align_downwards {
 /// # Example
 ///
 /// ```rust
-/// use vmm_sys_util::align_upwards;
-///
+/// # use vmm_sys_util::align_upwards;
 /// let addr: usize = 10;
 /// let alignment: usize = 4; // Must be a power of two
 /// let aligned = align_upwards!(addr, alignment);

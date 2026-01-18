@@ -117,9 +117,8 @@ pub fn SIGRTMAX() -> c_int {
 /// # Examples
 ///
 /// ```
-/// extern crate vmm_sys_util;
-/// use vmm_sys_util::signal::validate_signal_num;
-///
+/// # extern crate vmm_sys_util;
+/// # use vmm_sys_util::signal::validate_signal_num;
 /// let num = validate_signal_num(1).unwrap();
 /// ```
 pub fn validate_signal_num(num: c_int) -> errno::Result<()> {
@@ -147,10 +146,9 @@ pub fn validate_signal_num(num: c_int) -> errno::Result<()> {
 ///
 /// ```
 /// # extern crate libc;
-/// extern crate vmm_sys_util;
+/// # extern crate vmm_sys_util;
 /// # use libc::{c_int, c_void, siginfo_t, SA_SIGINFO};
-/// use vmm_sys_util::signal::{register_signal_handler, SignalHandler};
-///
+/// # use vmm_sys_util::signal::{register_signal_handler, SignalHandler};
 /// extern "C" fn handle_signal(_: c_int, _: *mut siginfo_t, _: *mut c_void) {}
 /// register_signal_handler(0, handle_signal);
 /// ```
@@ -198,10 +196,9 @@ pub fn register_signal_handler(num: c_int, handler: SignalHandler) -> errno::Res
 ///
 /// ```
 /// # extern crate libc;
-/// extern crate vmm_sys_util;
+/// # extern crate vmm_sys_util;
 /// # use libc::sigismember;
-/// use vmm_sys_util::signal::create_sigset;
-///
+/// # use vmm_sys_util::signal::create_sigset;
 /// let sigset = create_sigset(&[1]).unwrap();
 ///
 /// unsafe {
@@ -238,9 +235,8 @@ pub fn create_sigset(signals: &[c_int]) -> errno::Result<sigset_t> {
 /// # Examples
 ///
 /// ```
-/// extern crate vmm_sys_util;
-/// use vmm_sys_util::signal::{block_signal, get_blocked_signals};
-///
+/// # extern crate vmm_sys_util;
+/// # use vmm_sys_util::signal::{block_signal, get_blocked_signals};
 /// block_signal(1).unwrap();
 /// assert!(get_blocked_signals().unwrap().contains(&(1)));
 /// ```
@@ -278,9 +274,8 @@ pub fn get_blocked_signals() -> SignalResult<Vec<c_int>> {
 /// # Examples
 ///
 /// ```
-/// extern crate vmm_sys_util;
-/// use vmm_sys_util::signal::block_signal;
-///
+/// # extern crate vmm_sys_util;
+/// # use vmm_sys_util::signal::block_signal;
 /// block_signal(1).unwrap();
 /// ```
 // Allowing comparison chain because rewriting it with match makes the code less readable.
@@ -316,9 +311,8 @@ pub fn block_signal(num: c_int) -> SignalResult<()> {
 /// # Examples
 ///
 /// ```
-/// extern crate vmm_sys_util;
-/// use vmm_sys_util::signal::{block_signal, get_blocked_signals, unblock_signal};
-///
+/// # extern crate vmm_sys_util;
+/// # use vmm_sys_util::signal::{block_signal, get_blocked_signals, unblock_signal};
 /// block_signal(1).unwrap();
 /// assert!(get_blocked_signals().unwrap().contains(&(1)));
 /// unblock_signal(1).unwrap();
@@ -344,13 +338,12 @@ pub fn unblock_signal(num: c_int) -> SignalResult<()> {
 ///
 /// ```
 /// # extern crate libc;
-/// extern crate vmm_sys_util;
+/// # extern crate vmm_sys_util;
 /// # use libc::{pthread_kill, sigismember, sigpending, sigset_t};
 /// # use std::mem;
 /// # use std::thread;
 /// # use std::time::Duration;
-/// use vmm_sys_util::signal::{block_signal, clear_signal, Killable};
-///
+/// # use vmm_sys_util::signal::{block_signal, clear_signal, Killable};
 /// block_signal(1).unwrap();
 /// let killable = thread::spawn(move || {
 ///     thread::sleep(Duration::from_millis(100));

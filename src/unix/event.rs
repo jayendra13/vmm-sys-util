@@ -32,9 +32,9 @@ bitflags::bitflags! {
 /// # Examples
 ///
 /// ```
-/// use std::os::fd::FromRawFd;
-/// use std::os::unix::io::IntoRawFd;
-/// use vmm_sys_util::event::EventNotifier;
+/// # use std::os::fd::FromRawFd;
+/// # use std::os::unix::io::IntoRawFd;
+/// # use vmm_sys_util::event::EventNotifier;
 /// let (_, writer) = std::io::pipe().expect("Failed to create pipe");
 /// let notifier = unsafe { EventNotifier::from_raw_fd(writer.into_raw_fd()) };
 /// ```
@@ -86,9 +86,9 @@ impl IntoRawFd for EventNotifier {
 /// # Examples
 ///
 /// ```
-/// use std::os::fd::FromRawFd;
-/// use std::os::unix::io::IntoRawFd;
-/// use vmm_sys_util::event::EventConsumer;
+/// # use std::os::fd::FromRawFd;
+/// # use std::os::unix::io::IntoRawFd;
+/// # use vmm_sys_util::event::EventConsumer;
 /// let (reader, _) = std::io::pipe().expect("Failed to create pipe");
 /// let consumer = unsafe { EventConsumer::from_raw_fd(reader.into_raw_fd()) };
 /// ```
@@ -171,7 +171,7 @@ fn fcntl_setfd(file: &File, flag: i32) -> Result<(), io::Error> {
 /// # Examples
 ///
 /// ```
-/// use vmm_sys_util::event::{new_event_consumer_and_notifier, EventFlag};
+/// # use vmm_sys_util::event::{new_event_consumer_and_notifier, EventFlag};
 /// let (consumer, notifier) = new_event_consumer_and_notifier(EventFlag::NONBLOCK)
 ///     .expect("Failed to create notifier and consumer");
 /// notifier.notify().unwrap();
@@ -213,7 +213,7 @@ pub fn new_event_consumer_and_notifier(
 /// # Examples
 ///
 /// ```
-/// use vmm_sys_util::event::{new_event_consumer_and_notifier, EventFlag};
+/// # use vmm_sys_util::event::{new_event_consumer_and_notifier, EventFlag};
 /// let (consumer, notifier) = new_event_consumer_and_notifier(EventFlag::NONBLOCK)
 ///     .expect("Failed to create consumer and notifier");
 /// notifier.notify().unwrap();

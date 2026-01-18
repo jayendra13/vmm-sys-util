@@ -73,10 +73,9 @@ impl TimerFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
+    /// # extern crate vmm_sys_util;
     /// # use std::time::Duration;
-    /// use vmm_sys_util::timerfd::TimerFd;
-    ///
+    /// # use vmm_sys_util::timerfd::TimerFd;
     /// let mut timer = TimerFd::new().unwrap();
     /// let dur = Duration::from_millis(100);
     /// let interval = Duration::from_millis(100);
@@ -125,11 +124,10 @@ impl TimerFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
+    /// # extern crate vmm_sys_util;
     /// # use std::time::Duration;
     /// # use std::thread::sleep;
-    /// use vmm_sys_util::timerfd::TimerFd;
-    ///
+    /// # use vmm_sys_util::timerfd::TimerFd;
     /// let mut timer = TimerFd::new().unwrap();
     /// let dur = Duration::from_millis(100);
     /// let interval = Duration::from_millis(100);
@@ -156,10 +154,9 @@ impl TimerFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
+    /// # extern crate vmm_sys_util;
     /// # use std::time::Duration;
-    /// use vmm_sys_util::timerfd::TimerFd;
-    ///
+    /// # use vmm_sys_util::timerfd::TimerFd;
     /// let mut timer = TimerFd::new().unwrap();
     /// let dur = Duration::from_millis(100);
     ///
@@ -187,10 +184,9 @@ impl TimerFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
+    /// # extern crate vmm_sys_util;
     /// # use std::time::Duration;
-    /// use vmm_sys_util::timerfd::TimerFd;
-    ///
+    /// # use vmm_sys_util::timerfd::TimerFd;
     /// let mut timer = TimerFd::new().unwrap();
     /// let dur = Duration::from_millis(100);
     ///

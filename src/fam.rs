@@ -59,8 +59,7 @@ impl fmt::Display for Error {
 /// # Example
 ///
 /// ```
-/// use vmm_sys_util::fam::*;
-///
+/// # use vmm_sys_util::fam::*;
 /// #[repr(C)]
 /// #[derive(Default)]
 /// pub struct __IncompleteArrayField<T>(::std::marker::PhantomData<T>, [T; 0]);

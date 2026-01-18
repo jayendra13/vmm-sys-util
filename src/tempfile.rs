@@ -14,11 +14,10 @@
 //! # Examples
 //!
 //! ```
-//! use std::env::temp_dir;
-//! use std::io::Write;
-//! use std::path::{Path, PathBuf};
-//! use vmm_sys_util::tempfile::TempFile;
-//!
+//! # use std::env::temp_dir;
+//! # use std::io::Write;
+//! # use std::path::{Path, PathBuf};
+//! # use vmm_sys_util::tempfile::TempFile;
 //! let mut prefix = temp_dir();
 //! prefix.push("tempfile");
 //! let t = TempFile::new_with_prefix(prefix).unwrap();

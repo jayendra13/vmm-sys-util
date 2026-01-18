@@ -38,11 +38,9 @@ impl Error {
     ///
     /// ```
     /// # extern crate libc;
-    /// extern crate vmm_sys_util;
-    /// #
+    /// # extern crate vmm_sys_util;
     /// # use libc;
-    /// use vmm_sys_util::errno::Error;
-    ///
+    /// # use vmm_sys_util::errno::Error;
     /// let err = Error::new(libc::EIO);
     /// ```
     pub fn new(errno: i32) -> Error {
@@ -60,14 +58,12 @@ impl Error {
     ///
     /// ```
     /// # extern crate libc;
-    /// extern crate vmm_sys_util;
-    /// #
+    /// # extern crate vmm_sys_util;
     /// # use libc;
     /// # use std::fs::File;
     /// # use std::io::{self, Read};
     /// # use std::env::temp_dir;
-    /// use vmm_sys_util::errno::Error;
-    /// #
+    /// # use vmm_sys_util::errno::Error;
     /// // Reading from a file without permissions returns an error.
     /// let mut path = temp_dir();
     /// path.push("test");
@@ -91,9 +87,8 @@ impl Error {
     ///
     /// # Examples
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::errno::Error;
-    ///
+    /// # extern crate vmm_sys_util;
+    /// # use vmm_sys_util::errno::Error;
     /// let err = Error::new(13);
     /// assert_eq!(err.errno(), 13);
     /// ```

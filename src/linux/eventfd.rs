@@ -34,9 +34,8 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
-    ///
+    /// # extern crate vmm_sys_util;
+    /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// EventFd::new(EFD_NONBLOCK).unwrap();
     /// ```
     pub fn new(flag: i32) -> result::Result<EventFd, io::Error> {
@@ -68,9 +67,8 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
-    ///
+    /// # extern crate vmm_sys_util;
+    /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// let evt = EventFd::new(EFD_NONBLOCK).unwrap();
     /// evt.write(55).unwrap();
     /// ```
@@ -87,9 +85,8 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
-    ///
+    /// # extern crate vmm_sys_util;
+    /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// let evt = EventFd::new(EFD_NONBLOCK).unwrap();
     /// evt.write(55).unwrap();
     /// assert_eq!(evt.read().unwrap(), 55);
@@ -108,9 +105,8 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
-    ///
+    /// # extern crate vmm_sys_util;
+    /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// let evt = EventFd::new(EFD_NONBLOCK).unwrap();
     /// let evt_clone = evt.try_clone().unwrap();
     /// evt.write(923).unwrap();

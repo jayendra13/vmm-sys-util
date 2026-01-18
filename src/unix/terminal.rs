@@ -122,11 +122,10 @@ pub unsafe trait Terminal {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
+    /// # extern crate vmm_sys_util;
     /// # use std::io;
     /// # use std::os::unix::io::RawFd;
-    /// use vmm_sys_util::terminal::Terminal;
-    ///
+    /// # use vmm_sys_util::terminal::Terminal;
     /// let stdin_handle = io::stdin();
     /// let stdin = stdin_handle.lock();
     /// assert!(stdin.set_non_block(true).is_ok());
