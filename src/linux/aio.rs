@@ -108,8 +108,7 @@ impl IoContext {
     ///
     /// # Examples
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::aio::*;
+    /// # use vmm_sys_util::aio::*;
     /// # use std::fs::File;
     /// # use std::os::unix::io::AsRawFd;
     ///
@@ -181,8 +180,7 @@ impl IoContext {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::aio::*;
+    /// # use vmm_sys_util::aio::*;
     /// # use std::fs::File;
     /// # use std::os::unix::io::AsRawFd;
     ///

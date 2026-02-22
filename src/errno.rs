@@ -37,8 +37,6 @@ impl Error {
     /// # Examples
     ///
     /// ```
-    /// # extern crate libc;
-    /// # extern crate vmm_sys_util;
     /// # use libc;
     /// # use vmm_sys_util::errno::Error;
     /// let err = Error::new(libc::EIO);
@@ -57,8 +55,6 @@ impl Error {
     /// # Examples
     ///
     /// ```
-    /// # extern crate libc;
-    /// # extern crate vmm_sys_util;
     /// # use libc;
     /// # use std::fs::File;
     /// # use std::io::{self, Read};
@@ -87,7 +83,6 @@ impl Error {
     ///
     /// # Examples
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::errno::Error;
     /// let err = Error::new(13);
     /// assert_eq!(err.errno(), 13);

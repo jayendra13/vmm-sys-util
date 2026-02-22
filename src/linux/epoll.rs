@@ -111,7 +111,6 @@ impl EpollEvent {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::epoll::{EpollEvent, EventSet};
     /// let event = EpollEvent::new(EventSet::IN, 2);
     /// ```
@@ -128,7 +127,6 @@ impl EpollEvent {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::epoll::{EpollEvent, EventSet};
     /// let event = EpollEvent::new(EventSet::IN, 2);
     /// assert_eq!(event.events(), 1);
@@ -147,7 +145,6 @@ impl EpollEvent {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::epoll::{EpollEvent, EventSet};
     /// let event = EpollEvent::new(EventSet::IN, 2);
     /// assert_eq!(event.event_set(), EventSet::IN);
@@ -164,7 +161,6 @@ impl EpollEvent {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::epoll::{EpollEvent, EventSet};
     /// let event = EpollEvent::new(EventSet::IN, 2);
     /// assert_eq!(event.data(), 2);
@@ -181,7 +177,6 @@ impl EpollEvent {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::epoll::{EpollEvent, EventSet};
     /// let event = EpollEvent::new(EventSet::IN, 2);
     /// assert_eq!(event.fd(), 2);
@@ -222,7 +217,6 @@ impl Epoll {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use std::os::unix::io::AsRawFd;
     /// # use vmm_sys_util::epoll::{ControlOperation, Epoll, EpollEvent, EventSet};
     /// # use vmm_sys_util::eventfd::EventFd;
@@ -273,7 +267,6 @@ impl Epoll {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use std::os::unix::io::AsRawFd;
     /// # use vmm_sys_util::epoll::{ControlOperation, Epoll, EpollEvent, EventSet};
     /// # use vmm_sys_util::eventfd::EventFd;

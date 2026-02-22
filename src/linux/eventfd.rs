@@ -34,7 +34,6 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// EventFd::new(EFD_NONBLOCK).unwrap();
     /// ```
@@ -67,7 +66,6 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// let evt = EventFd::new(EFD_NONBLOCK).unwrap();
     /// evt.write(55).unwrap();
@@ -85,7 +83,6 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// let evt = EventFd::new(EFD_NONBLOCK).unwrap();
     /// evt.write(55).unwrap();
@@ -105,7 +102,6 @@ impl EventFd {
     /// # Examples
     ///
     /// ```
-    /// # extern crate vmm_sys_util;
     /// # use vmm_sys_util::eventfd::{EventFd, EFD_NONBLOCK};
     /// let evt = EventFd::new(EFD_NONBLOCK).unwrap();
     /// let evt_clone = evt.try_clone().unwrap();

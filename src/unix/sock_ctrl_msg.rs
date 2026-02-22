@@ -234,12 +234,12 @@ unsafe fn raw_recvmsg(
 /// # Examples
 ///
 /// ```
-/// use std::os::fd::{AsRawFd, FromRawFd};
-/// use std::os::unix::net::UnixDatagram;
+/// # use std::os::fd::{AsRawFd, FromRawFd};
+/// # use std::os::unix::net::UnixDatagram;
 ///
-/// use libc::{c_void, iovec};
-/// use vmm_sys_util::event::{new_event_consumer_and_notifier, EventFlag, EventNotifier};
-/// use vmm_sys_util::sock_ctrl_msg::ScmSocket;
+/// # use libc::{c_void, iovec};
+/// # use vmm_sys_util::event::{new_event_consumer_and_notifier, EventFlag, EventNotifier};
+/// # use vmm_sys_util::sock_ctrl_msg::ScmSocket;
 ///
 /// let (s1, s2) = UnixDatagram::pair().expect("failed to create socket pair");
 /// let (consumer, fd_to_send) = new_event_consumer_and_notifier(EventFlag::empty())

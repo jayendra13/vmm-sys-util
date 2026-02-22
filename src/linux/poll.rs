@@ -374,9 +374,8 @@ impl WatchingEvents {
 /// # Examples
 ///
 /// ```
-/// extern crate vmm_sys_util;
-/// use vmm_sys_util::eventfd::EventFd;
-/// use vmm_sys_util::poll::{EpollContext, EpollEvents};
+/// # use vmm_sys_util::eventfd::EventFd;
+/// # use vmm_sys_util::poll::{EpollContext, EpollEvents};
 ///
 /// let evt = EventFd::new(0).unwrap();
 /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();
@@ -405,8 +404,7 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::poll::EpollContext;
+    /// # use vmm_sys_util::poll::EpollContext;
     ///
     /// let ctx: EpollContext<usize> = EpollContext::new().unwrap();
     /// ```
@@ -439,9 +437,8 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::EventFd;
-    /// use vmm_sys_util::poll::EpollContext;
+    /// # use vmm_sys_util::eventfd::EventFd;
+    /// # use vmm_sys_util::poll::EpollContext;
     ///
     /// let evt = EventFd::new(0).unwrap();
     /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();
@@ -468,9 +465,8 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::EventFd;
-    /// use vmm_sys_util::poll::{EpollContext, WatchingEvents};
+    /// # use vmm_sys_util::eventfd::EventFd;
+    /// # use vmm_sys_util::poll::{EpollContext, WatchingEvents};
     ///
     /// let evt = EventFd::new(0).unwrap();
     /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();
@@ -517,9 +513,8 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::EventFd;
-    /// use vmm_sys_util::poll::{EpollContext, WatchingEvents};
+    /// # use vmm_sys_util::eventfd::EventFd;
+    /// # use vmm_sys_util::poll::{EpollContext, WatchingEvents};
     ///
     /// let evt = EventFd::new(0).unwrap();
     /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();
@@ -563,9 +558,8 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::EventFd;
-    /// use vmm_sys_util::poll::EpollContext;
+    /// # use vmm_sys_util::eventfd::EventFd;
+    /// # use vmm_sys_util::poll::EpollContext;
     ///
     /// let evt = EventFd::new(0).unwrap();
     /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();
@@ -604,9 +598,8 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
-    /// use vmm_sys_util::eventfd::EventFd;
-    /// use vmm_sys_util::poll::{EpollContext, EpollEvents};
+    /// # use vmm_sys_util::eventfd::EventFd;
+    /// # use vmm_sys_util::poll::{EpollContext, EpollEvents};
     ///
     /// let evt = EventFd::new(0).unwrap();
     /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();
@@ -637,10 +630,9 @@ impl<T: PollToken> EpollContext<T> {
     /// # Examples
     ///
     /// ```
-    /// extern crate vmm_sys_util;
     /// # use std::time::Duration;
-    /// use vmm_sys_util::eventfd::EventFd;
-    /// use vmm_sys_util::poll::{EpollContext, EpollEvents};
+    /// # use vmm_sys_util::eventfd::EventFd;
+    /// # use vmm_sys_util::poll::{EpollContext, EpollEvents};
     ///
     /// let evt = EventFd::new(0).unwrap();
     /// let ctx: EpollContext<u32> = EpollContext::new().unwrap();

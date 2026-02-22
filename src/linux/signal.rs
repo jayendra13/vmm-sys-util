@@ -117,7 +117,6 @@ pub fn SIGRTMAX() -> c_int {
 /// # Examples
 ///
 /// ```
-/// # extern crate vmm_sys_util;
 /// # use vmm_sys_util::signal::validate_signal_num;
 /// let num = validate_signal_num(1).unwrap();
 /// ```
@@ -145,8 +144,6 @@ pub fn validate_signal_num(num: c_int) -> errno::Result<()> {
 /// # Examples
 ///
 /// ```
-/// # extern crate libc;
-/// # extern crate vmm_sys_util;
 /// # use libc::{c_int, c_void, siginfo_t, SA_SIGINFO};
 /// # use vmm_sys_util::signal::{register_signal_handler, SignalHandler};
 /// extern "C" fn handle_signal(_: c_int, _: *mut siginfo_t, _: *mut c_void) {}
@@ -195,8 +192,6 @@ pub fn register_signal_handler(num: c_int, handler: SignalHandler) -> errno::Res
 /// # Examples
 ///
 /// ```
-/// # extern crate libc;
-/// # extern crate vmm_sys_util;
 /// # use libc::sigismember;
 /// # use vmm_sys_util::signal::create_sigset;
 /// let sigset = create_sigset(&[1]).unwrap();
@@ -235,7 +230,6 @@ pub fn create_sigset(signals: &[c_int]) -> errno::Result<sigset_t> {
 /// # Examples
 ///
 /// ```
-/// # extern crate vmm_sys_util;
 /// # use vmm_sys_util::signal::{block_signal, get_blocked_signals};
 /// block_signal(1).unwrap();
 /// assert!(get_blocked_signals().unwrap().contains(&(1)));
@@ -274,7 +268,6 @@ pub fn get_blocked_signals() -> SignalResult<Vec<c_int>> {
 /// # Examples
 ///
 /// ```
-/// # extern crate vmm_sys_util;
 /// # use vmm_sys_util::signal::block_signal;
 /// block_signal(1).unwrap();
 /// ```
@@ -311,7 +304,6 @@ pub fn block_signal(num: c_int) -> SignalResult<()> {
 /// # Examples
 ///
 /// ```
-/// # extern crate vmm_sys_util;
 /// # use vmm_sys_util::signal::{block_signal, get_blocked_signals, unblock_signal};
 /// block_signal(1).unwrap();
 /// assert!(get_blocked_signals().unwrap().contains(&(1)));
@@ -337,8 +329,6 @@ pub fn unblock_signal(num: c_int) -> SignalResult<()> {
 /// # Examples
 ///
 /// ```
-/// # extern crate libc;
-/// # extern crate vmm_sys_util;
 /// # use libc::{pthread_kill, sigismember, sigpending, sigset_t};
 /// # use std::mem;
 /// # use std::thread;

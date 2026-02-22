@@ -38,11 +38,10 @@ pub enum FallocateMode {
 /// # Examples
 ///
 /// ```
-/// extern crate vmm_sys_util;
 /// # use std::fs::OpenOptions;
 /// # use std::path::PathBuf;
-/// use vmm_sys_util::fallocate::{fallocate, FallocateMode};
-/// use vmm_sys_util::tempdir::TempDir;
+/// # use vmm_sys_util::fallocate::{fallocate, FallocateMode};
+/// # use vmm_sys_util::tempdir::TempDir;
 ///
 /// let tempdir = TempDir::new_with_prefix("/tmp/fallocate_test").unwrap();
 /// let mut path = PathBuf::from(tempdir.as_path());
